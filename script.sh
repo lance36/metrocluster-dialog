@@ -23,13 +23,12 @@ case $CHOICE in
                 OPTIONS=(1 "Spegnimento sito di Campo Boario 56"
                         2 "Spegnimento Sito Scalo Prenestino 15")
                 CHOICE2=$(dialog --no-lines\
-                --clear \
                 --backtitle "$BACKTITLE" \
                 --title "$TITLE" \
                 --menu "$MENU" \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
                 "${OPTIONS[@]}" \
-				--and-widget  --no-lines --title "$WARNINGTITLE" --yesno "$MSGCONFIRM" 10 50\
+				--and-widget  --keep-window --ascii-lines --title "$WARNINGTITLE" --yesno "$MSGCONFIRM" 10 50\
                 2>&1 >/dev/tty)
 				if [[ $? != 0 ]]; then clear; echo "Operazione Annullata";exit $rc; fi
                 case $CHOICE2 in
