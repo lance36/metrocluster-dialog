@@ -1,1 +1,1 @@
-echo "spengo campo boario FORZATO"
+echo "spengo campo boario PIANIFICATO"
