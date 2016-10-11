@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 HEIGHT=15
@@ -34,20 +33,19 @@ case $CHOICE in
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
                 case $CHOICE2 in
-                        1) 
+                        1)
 							clear
 							./spegni_cb_pianificato.sh
 							exit 0
                         ;;
-                        2) 
+                        2)
 							clear
 							./spegni_sp_pianificato.sh
 							exit 0
                         ;;
 		esac
         ;;
-        2)
-            #FORZATO
+        2) #FORZATO
 			dialog --no-lines --title "[ ! ] ATTENZIONE[ ! ]" --yesno "inserire warning-text qui" 13 125 
 			if [[ $? == 1 ]]; then echo "Operazione Annullata";exit $rc; fi
                 TITLE="[ ! ] Switchover FORZATO [ ! ]"
@@ -62,12 +60,12 @@ case $CHOICE in
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
                 case $CHOICE2 in
-                        1) 
+                        1)
 							clear
 							./spegni_cb_pianificato.sh
 							exit 0
                         ;;
-                        2) 
+                        2)
 							clear
 							./spegni_sp_pianificato.sh
 							exit 0
