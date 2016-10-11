@@ -62,12 +62,12 @@ case $CHOICE in
                 case $CHOICE2 in
                         1)
 							clear
-							./spegni_cb_pianificato.sh
+							./spegni_cb_forzato.sh
 							exit 0
                         ;;
                         2)
 							clear
-							./spegni_sp_pianificato.sh
+							./spegni_sp_forzato.sh
 							exit 0
                         ;;
 		esac
