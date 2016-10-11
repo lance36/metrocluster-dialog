@@ -30,6 +30,8 @@ case $CHOICE in
                 2>&1 >/dev/tty)
                 case $CHOICE2 in
                         1)
+				dialog --no-lines --title "[ ! ] ATTENZIONE[ ! ]" --yesno "\nSicuro?" 10 50
+				if [[ $? == 1 ]]; then clear; echo "Operazione Annullata";exit $rc; fi
 				clear
 				./spegni_cb_pianificato.sh
 				exit 0
