@@ -43,8 +43,8 @@ case $CHOICE in
         ;;
         2)
             #FORZATO
-		dialog --no-lines --title "[ ! ] ATTENZIONE[ ! ]" --yesno "inserire warning-text qui" 13 125 
-		if [[ $? == 1 ]]; then echo "Operazione Annullata";exit $rc; fi
+		dialog --no-lines --title "[ ! ] ATTENZIONE[ ! ]" --yesno "$(<warning_message.txt)" 13 125
+		if [[ $? == 1 ]]; then clear; echo "Operazione Annullata";exit $rc; fi
                 TITLE="[ ! ] Switchover FORZATO [ ! ]"
                 OPTIONS=(1 "Spegnimento sito di Campo Boario 56"
                         2 "Spegnimento Sito Scalo Prenestino 15")
