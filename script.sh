@@ -29,22 +29,22 @@ case $CHOICE in
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
                 case $CHOICE2 in
-                        1) 
-							clear
-							./spegni_cb_pianificato.sh
-							exit 0
+                        1)
+				clear
+				./spegni_cb_pianificato.sh
+				exit 0
                         ;;
-                        2) 
-							clear
-							./spegni_sp_pianificato.sh
-							exit 0
+                        2)
+				clear
+				./spegni_sp_pianificato.sh
+				exit 0
                         ;;
 		esac
         ;;
         2)
             #FORZATO
-			dialog --no-lines --title "[ ! ] ATTENZIONE[ ! ]" --yesno "inserire warning-text qui" 13 125 
-			if [[ $? == 1 ]]; then echo "Operazione Annullata";exit $rc; fi
+		dialog --no-lines --title "[ ! ] ATTENZIONE[ ! ]" --yesno "inserire warning-text qui" 13 125 
+		if [[ $? == 1 ]]; then echo "Operazione Annullata";exit $rc; fi
                 TITLE="[ ! ] Switchover FORZATO [ ! ]"
                 OPTIONS=(1 "Spegnimento sito di Campo Boario 56"
                         2 "Spegnimento Sito Scalo Prenestino 15")
@@ -57,15 +57,15 @@ case $CHOICE in
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
                 case $CHOICE2 in
-                        1) 
-							clear
-							./spegni_cb_pianificato.sh
-							exit 0
+                        1)
+				clear
+				./spegni_cb_pianificato.sh
+				exit 0
                         ;;
-                        2) 
-							clear
-							./spegni_sp_pianificato.sh
-							exit 0
+                        2)
+				clear
+				./spegni_sp_pianificato.sh
+				exit 0
                         ;;
 		esac
             ;;
