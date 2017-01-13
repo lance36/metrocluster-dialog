@@ -58,11 +58,16 @@ if [[ $? != 0 ]]; then clear; echo "Operazione Annullata";exit $rc; fi
 clear
 elif [ "$1" = "spegniCB" ]
 then
-  echo "Spegnimento Sito Campo Boario, 56"
+  echo "(fake) Avvio Switchover Sito Campo Boario, 56..."
+  sleep 5
+  echo "(fake) Switchover Completato."
 elif [ "$1" = "spegniSP" ]
 then
-  echo "Spegnimento Sito Scalo Prenestino, 15"
+  echo "(fake) Avvio Switchover Sito Scalo Prenestino, 15"
+  sleep 5
+  echo "(fake) Switchover Completato."
 else
   echo "Invalid Agrument supplied '$@'"
 fi
+
 
